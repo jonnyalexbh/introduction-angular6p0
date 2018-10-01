@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-
+/**
+* decorator
+*
+*/
 @Component({
   selector: 'employee-tag',
   templateUrl: './employee.component.html'
