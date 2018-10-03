@@ -17,6 +17,7 @@ export class EmployeeComponent
   public title = 'Component employees';
   public employee:Employee;
   public workers:Array<Employee>;
+  public employee_external:boolean;
   /**
   * constructor
   *
@@ -27,8 +28,9 @@ export class EmployeeComponent
     this.workers = [
       new Employee('Juan David Lopez', 30, 'Ing. sistemas', false),
       new Employee('Daniela Lopez', 56, 'Ing. industrial', true),
-      new Employee('Jonathan Alexis', 26, 'Ing. sistemas', true)
+      new Employee('Jonathan Alexis', 26, 'Ing. sistemas', false)
     ];
+    this.employee_external = false;
   }
   /**
   * ngOnInit - first method that is executed after the constructor
@@ -38,5 +40,12 @@ export class EmployeeComponent
   {
     console.log(this.employee);
     console.log(this.workers);
+  }
+  /**
+  * changeExternal
+  *
+  */
+  changeExternal(param){
+    this.employee_external = param;
   }
 }
