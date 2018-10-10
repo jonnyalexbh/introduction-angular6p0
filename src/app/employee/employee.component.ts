@@ -18,6 +18,7 @@ export class EmployeeComponent
   public employee:Employee;
   public workers:Array<Employee>;
   public employee_external:boolean;
+  public color:string;
   /**
   * constructor
   *
@@ -31,6 +32,7 @@ export class EmployeeComponent
       new Employee('Jonathan Alexis', 26, 'Ing. sistemas', false)
     ];
     this.employee_external = false;
+    this.color = '#285D91';
   }
   /**
   * ngOnInit - first method that is executed after the constructor
