@@ -12,19 +12,18 @@ import { Employee } from './employee';
 * EmployeeComponent
 *
 */
-export class EmployeeComponent
-{
+export class EmployeeComponent {
   public title = 'Component employees';
-  public employee:Employee;
-  public workers:Array<Employee>;
-  public employee_external:boolean;
-  public color:string;
+  public employee: Employee;
+  public workers: Array<Employee>;
+  public employee_external: boolean;
+  public color: string;
+  public selected_color: string;
   /**
   * constructor
   *
   */
-  constructor()
-  {
+  constructor() {
     this.employee = new Employee('Jonny Alexander', 28, 'Ing. sistemas', true);
     this.workers = [
       new Employee('Juan David Lopez', 30, 'Ing. sistemas', false),
@@ -33,13 +32,13 @@ export class EmployeeComponent
     ];
     this.employee_external = false;
     this.color = '#285D91';
+    this.selected_color = '#CCC';
   }
   /**
   * ngOnInit - first method that is executed after the constructor
   *
   */
-  ngOnInit()
-  {
+  ngOnInit() {
     console.log(this.employee);
     console.log(this.workers);
   }
@@ -47,7 +46,14 @@ export class EmployeeComponent
   * changeExternal
   *
   */
-  changeExternal(param){
+  changeExternal(param) {
     this.employee_external = param;
+  }
+  /**
+  * logSelectedColor
+  *
+  */
+  logSelectedColor() {
+    console.log(this.selected_color);
   }
 }
